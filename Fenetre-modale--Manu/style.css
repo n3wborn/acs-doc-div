@@ -1,0 +1,55 @@
+#modal {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0,0,0, 0.80);
+}
+
+#modal_dialog {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 80%;
+	min-width: 50vw;
+	min-height: 50vh;
+	padding: 40px;
+	background-color: #FEFEFE;
+}
+
+#modal_text {
+	font-size: 1.3rem;
+	font-weight: bold;
+	text-align: center;
+}
+
+#modal-btn-yes, #modal-btn-no {
+	font-size: 2rem;
+	color: white;
+	font-weight: bold;
+	padding: 1.5rem 2rem;
+	border: 1px solid;
+	border-color: rgba(120,120,120, 1);
+	border-radius: 25px;
+	box-shadow: 2px 2px 2px 0px rgba(36,36,36,1);
+	-webkit-box-shadow: 2px 2px 2px 0px rgba(36,36,36,1);
+	-moz-box-shadow: 2px 2px 2px 0px rgba(36,36,36,1);
+	cursor: pointer;
+}
+
+#modal-btn-no {
+	color: red;
+}
+
+#modal-btn-yes {
+	color: green;
+}
+
+#modal.hidden {
+	display: none;
+}

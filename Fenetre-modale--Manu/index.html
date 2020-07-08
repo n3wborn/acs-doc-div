@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Modal</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+	<!-- mon tableau -->
+<table>
+	<tr>
+		<td><a class="btn-delete" href="delete.php?id=1">Supprimer</a></td>
+	</tr>
+	<tr>
+		<td><a class="btn-delete" href="delete.php?id=2">Supprimer</a></td>
+	</tr>
+	<tr>
+		<td><a class="btn-delete" href="delete.php?id=3">Supprimer</a></td>
+	</tr>
+</table>
+
+<!-- mon modal -->
+<div id="modal" class="hidden">
+	<div id="modal_dialog" >
+		<p id="modal_text">Est-ce vous sur de vouloir supprimer ?</p>
+		<div class="modal_area_btn">
+			<button id="modal-btn-yes">Oui</button>
+			<button id="modal-btn-no">Non</button>
+		</div>
+	</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
