@@ -1,0 +1,14 @@
+nav {
+	position: absolute;
+	width: 180px;
+	height: 100vh;
+	background-color: rgba(170, 57, 57, 0.9) ;
+	top: 0;
+	left: -200px;
+	transition: left .400s linear;
+}
+
+nav.show {
+	left:0px;
+	transition: right .400s linear;
+}
