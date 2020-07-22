@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+}
+
+
+.container  {
+  height: 800px;
+  overflow: hidden;
+  position: relative;
+}
+
+
+ul {
+  padding-left: 0;
+  list-style: none;
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+}
+
+li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity .400s linear ;
+}
+
+li.active {
+  opacity: 1;
+  transition: opacity .600s linear ;
+}
+
+.area_button {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.cursor {
+  width: 120px;
+  height: 8px;
+  display: inline-block;
+  margin: 20px;
+  background: rgba(95, 158, 160, 0.5);
+}
+
+.cursor.active {
+  background: rgba(225, 225, 225, 0.5);
+}
+
