@@ -1,0 +1,62 @@
+#app{
+    width: 80%;
+    max-width: 1600px;
+    margin: 100px auto;
+}
+
+.graph{
+    display: flex;
+    min-height: 600px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+
+.graph_graph{
+    width: 60%;
+    border-left: 1px dolid #ccc;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.graph_graph_bar{
+    width: 25%;
+    background-color: hotpink;
+    height:0%;
+    transition: height .400s linear;
+}
+
+
+.graph_graph_bar--h100{    
+    height: 100%;
+    transition: height .400s linear;
+}
+
+
+.graph_buttons{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   
+}
+
+.graph_button{
+    padding: 15px 20px;
+    border: none;
+    border-radius: 8px;
+    margin: 8px 0;
+    min-width: 120px;
+    cursor: pointer;
+}
+
+.graph_button:focus{ 
+    outline: none; 
+}
+
+.graph_button--green{
+    background-color: greenyellow;
+}
