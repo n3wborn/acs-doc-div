@@ -1,43 +1,120 @@
+// we select our caroussel and every li inside
+const caroussel = document.querySelector('.caroussel');
+const pictures = caroussel.querySelectorAll('ul>li');
+
+
+let chrono = null;
+
+// load caroussel if we have pictures
+if(pictures.length > 1){
+  loadCaroussel();
+}
+
+
+
 function loadCaroussel() {
-  // we give "active" class to the first picture
+  // We give the 1st li active class
   pictures[0].classList.add('active');
 
-  //we create a new div
+  // create a areaButton div with area_button class
   const areaButton = document.createElement('DIV');
   areaButton.classList.add('area_button');
 
-  // we place it in caroussel's div
-  caroussel.appendChild(areaButton);
+  // loop through our pictures
+  for (let i=0; i < pictures.length; i++) {
 
-  // for each picture
-  for (let i = 0; i < pictures.length; i++) {
-    // create an anchor
+    // create a "cursor" with it's own class
     const cursor = document.createElement('A');
     cursor.classList.add('cursor');
-    cursor.setAttribute('href', '#');
 
-    // if first pictur, add active class
-    if (i === 0) {
+    // and give it "active" class
+    if (i === 1) {
       cursor.classList.add('active');
-    }
+  }
 
-    // listen to click
-    cursor.addEventListener('click', function(e) {
-      e.preventDefault();
-      console.log('CLICK')
-    });
+  // give a target to our cursor
+  cursor.setAttribute('href', '#');
+
+  cursor.addEventListener('click', function(e){
+    // if clicked, do not follow the link and stop chrono
+    e.preventDefault;
+    clearTimeout(chrono);
+
+    // Select every link in our div
+    const cursors = caroussel.querySelectorAll('div > a');
+    // Giv it an index
+    const index = [].indexOf.call(cursors, this);
+
+    // and play from this index
+    carousselPlay(index);
+  })
+
+  areaButton.appendChild(cursor);
+  chrono = setTimeout('carousselPlay();', 5000);
+  }
+
+  // add areaButton's div
+  caroussel.appendChild(areaButton);
+}
 
 
-    areaButton.appendChild(cursor);
+
+function carousselPlay(index = -1) {
+  if (index === -1) {
+    autoPlay();
+  } else {
+    manualPlay(index);
   }
 }
 
 
-const caroussel = document.querySelector('.caroussel');
-const pictures = document.querySelectorAll('ul > li');
 
+function manualPlay(index) {
+  // Select the li having li class
+  const currentPicture = caroussel.querySelector('ul>li.active');
 
-if (pictures.length > 1) {
-  loadCaroussel();
+  // keep trace of current index
+  const currentIndex = [].indexOf.call(pictures, currentPicture);
+
+  // and if we're not on current index
+  if (index !== currentIndex) {
+
+    // We modify which picture is "active"
+    currentPicture.classList.remove('active');
+    pictures[index].classList.add('active');
+
+    // which cursor is "active" too
+    const cursors = caroussel.querySelectorAll('div > a');
+    cursors[currentIndex].classList.remove('active');
+    cursors[index].classList.add('active');
+
+    // and set a timeout
+    chrono = setTimeout('carousselPlay()', 5000);
+  }
 }
 
+
+
+function autoPlay() {
+  //Sélection du li qui à la classe active
+  const currentPicture = caroussel.querySelector('ul>li.active');
+
+  // li qui à la classe active parmis tous les li
+  const currentIndex = [].indexOf.call(pictures, currentPicture);
+
+  const index = (currentIndex === (pictures.length - 1)) ? 0 : currentIndex + 1;
+
+  if (index !== currentIndex) {
+
+    // We modify which picture is "active"
+    currentPicture.classList.remove('active');
+    pictures[index].classList.add('active');
+
+    // We modify which cursor is "active"
+    const cursors = caroussel.querySelectorAll('div > a');
+    cursors[currentIndex].classList.remove('active');
+    cursors[index].classList.add('active');
+
+    chrono = setTimeout('carousselPlay()', 5000);
+  }
+}
