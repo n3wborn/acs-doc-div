@@ -8,13 +8,21 @@ extension .sass : syntaxe indentée (indentation en place des accolades)
 extension .css : avec accolades
 
 
-## Installation :
+## Installation de NodeJS/NPM
 
-Installer Node/npm, puis
+```bash
+    curl -sL https://deb.nodesource.com/setup_12.x -o nodesource_setup.sh
+    sudo bash nodesource_setup.sh
+    sudo apt install nodejs
+```
+
+## Installation de Sass
 
 ```bash
 npm install sass
 ```
+
+NOTE: **Il est possible que l'option -g soit necessaire** 
 
 ## Création css
 
