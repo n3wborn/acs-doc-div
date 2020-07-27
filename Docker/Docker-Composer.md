@@ -13,6 +13,12 @@ Pour avoir l'esprit tranquille si on utilise Docker depuis un hôte Windows, le 
 docker run --rm -ti -v "chemin/absolu/vers/repertoire:/app" composer install
 ```
 
+Par exemple :
+
+```bash
+docker run --rm --interactive --tty --volume "C:\Users\acs.PORT-0308\dev\ACS-Projets\dashboard_project":/app composer install
+```
+
 ## Persistance des données
 
 on va indiquer où conserver nos données dans un bind mount (toujours adapter selon l'OS) :
