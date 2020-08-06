@@ -67,7 +67,7 @@ git commit -m "Add .gitignore" .gitignore
 
 ## Twig -- Préparation du projet
 
-Pour pouvoir utiliser Twig, il faut lui indiquer (dans notre fichier index.php) les bonnes indications. D'après la [doc](https://twig.symfony.com/doc/3.x/api.html) le code est le suivant
+Pour pouvoir utiliser Twig, il faut lui indiquer (**dans tous nos fichiers .php**) les bonnes indications. D'après la [doc](https://twig.symfony.com/doc/3.x/api.html) le code est le suivant
 
 ```php
 require_once '/path/to/vendor/autoload.php';
@@ -80,7 +80,7 @@ $twig = new \Twig\Environment($loader, [
 
 La première ligne sert à indiquer où se trouve (par rapport à notre fichier index.php) le dossier vendor.
 
-Les suivants serviront pour savoir où se trouvent nos templates et commment gérer le cache (que l'on n'utilise pas pour le moment).
+Les suivants serviront pour savoir **où se trouvent nos templates** et commment gérer le cache (que l'on n'utilise pas pour le moment).
 
 Pour mon projet, cela donnera donc :
 
