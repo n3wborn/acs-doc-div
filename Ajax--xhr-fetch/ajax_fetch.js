@@ -17,8 +17,8 @@ function readJsonFile(file, callback) {
 		});
 }
 
-readJsonFile('./example.json', function(json) {
+/*readJsonFile('./example.json', function(json) {
 	console.log(json);
-})
+})*/
 
 
