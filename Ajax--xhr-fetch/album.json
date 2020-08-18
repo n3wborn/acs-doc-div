@@ -1,0 +1,28 @@
+{
+	"album" : [
+			{
+				"url" : "http://placekitten.com/200/200",
+				"legend" : "cats, cats, cats",
+				"date" : "18/08/2020",
+				"lieu" : "intertubes"
+			},
+			{
+				"url" : "http://placekitten.com/200/200",
+				"legend" : "cats, cats, cats",
+				"date" : "18/08/2020",
+				"lieu" : "intertubes"
+			},
+			{
+				"url" : "http://placekitten.com/200/200",
+				"legend" : "cats, cats, cats",
+				"date" : "18/08/2020",
+				"lieu" : "intertubes"
+			},
+			{
+				"url" : "http://placekitten.com/200/200",
+				"legend" : "cats, cats, cats",
+				"date" : "18/08/2020",
+				"lieu" : "intertubes"
+			}
+	]
+}
