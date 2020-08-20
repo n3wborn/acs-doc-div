@@ -23,7 +23,7 @@ is_connected();
 	</style>
 	<body>
 		<p>
-			<a href="./traitement/deconnection.php">Deconnection</a>
+			<a href="./deconnection.php">Deconnection</a>
 		</p>
 
 		<h1>Mon interface de Gestion</h1>
