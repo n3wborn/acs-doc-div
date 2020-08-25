@@ -1,0 +1,10 @@
+{
+		"autoload" : {
+			"psr-4" : {
+				"Exemple\\" : "class/"
+			}
+		},
+    "require": {
+        "twig/twig": "^3.0"
+    }
+}
