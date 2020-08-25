@@ -48,3 +48,26 @@ Dans celle-ci on placera :
 COPY --from=composer /usr/bin/composer /usr/bin/composer
 ```
 
+## Autoload
+
+Lorsque l'on créé nos propres namespace et autoload, par exemple avec un composer.json comme ceci : 
+
+```
+{
+        "autoload" : {
+            "psr-4" : {
+                "Exemple\\" : "class/"
+            }
+        },
+    "require": {
+        "twig/twig": "^3.0"
+    }
+}
+```
+
+On doit, en plus d'installer les dependances, gérer l'autoload. Pour se faire, on va utiliser dump-autoload:
+
+```
+docker run --rm --interactive --tty --volume "C:\Users\acs.PORT-0308\dev\ACS-Projets\dashboard_project":/app composer dump-autoload
+```
+
