@@ -126,3 +126,17 @@ class Personnage
 
 On peut donc donner une valeur à une variable privée si sa classe possède ce type de methode.
 
+
+## Héritage
+
+```php
+class Archer extends Personnage
+{
+...
+}
+```
+
+La classe fille **hérite de toutes les méthodes publiques et protégées** de la classe parente.
+
+Tant qu'une classe n'écrase pas ces méthodes, elles **conservent leurs fonctionnalités d'origine**.
+
