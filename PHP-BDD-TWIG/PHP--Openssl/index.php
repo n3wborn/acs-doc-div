@@ -21,7 +21,7 @@ $email_crypt_url = urlencode($email_crypt);
 
 // print_r($text_decrypt);
 
-//On montre les différents types de Hash
+// On montre les différents types de Hash
 // print_r(hash_algos());
 
 
@@ -40,8 +40,8 @@ print_r($email_crypt);
 //Boucle qui permet pour chaque algo de hash, de définir la valeur hash
 
 foreach(hash_algos() as $value){
-    $result = hash($value, $email);
-    echo $value . " - " .strlen($result) . " - " . $result . "\n";
+  $result = hash($value, $email);
+  echo $value . " - " .strlen($result) . " - " . $result . "\n";
 }
 
 echo "</pre>";
