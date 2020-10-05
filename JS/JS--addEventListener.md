@@ -12,34 +12,39 @@ Exemple, avec le code html suivant :
 
 En js on aura :
 
-    //je cible mon bouton
-    const mybtn = document.getElementById('btn');
+```js
+//je cible mon bouton
+const mybtn = document.getElementById('btn');
 
-    //et je lui ajouter un ecouteur d'evenement, ici click
-    mybtn.addeventlistener('click', function()) {
-        console.log('Hello');
-    }
-    
-    //le double click
-    mybtn.addeventlistener('dblclick', function()) {
-        console.log('Hello');
-    }
-    
-    //et le mouseover
-    mybtn.addeventlistener('dblclick', function()) {
-        console.log('Hello');
-    }
+//et je lui ajouter un ecouteur d'evenement, ici click
+mybtn.addEventListener('click', function(){
+    console.log('click');
+});
+
+//le double click
+mybtn.addEventListener('dblclick', function() {
+    console.log('Hello');
+});
+
+//et le mouseover
+mybtn.addEventListener('dblclick', function() {
+    console.log('Hello');
+});
+
+```
 
 Si on veut délencher une fonction que l'on a créé, ne va pas la placer directement mais on va plutot procéder ainsi:
 
-    //ma fonction
-    function sayHello () {
-        console.log('Hello');
-    }
+```js
+//ma fonction
+function sayHello () {
+    console.log('Hello');
+}
 
-    //et son declenchement lors des evenements
-    mybtn.addeventlistener('dblclick', function()) {
-        sayHello();
-    }
+//et son declenchement lors des evenements
+mybtn.addEventListener('dblclick', function() {
+    sayHello();
+});
+```
 
 Et on fera de même pour chaque evenement que l'on veut ecouter
